@@ -217,6 +217,7 @@ export default {
 
   methods: {
     onChange(item) {
+      this.clearData()
       switch (item.value) {
         case "simpson13":
           this.show_s13 = true;
@@ -245,11 +246,40 @@ export default {
           this.show_s38l = true;
           break;
       }
+    },clearData(){
+      this.data_s13= {
+        f: "",
+        a: null,
+        b: null,
+        n: null,
+      },
+
+      this.data_s38= {
+        f: "",
+        x0: null,
+        xn: null,
+      },
+
+      this.data_s13l= {
+        x_list: "",
+        y_list: "",
+      },
+
+      this.data_s38l= {
+        x_list: "",
+        y_list: "",
+      },
+      this.result = "",
+      this.show_result = false
+
     },
 
     async submitS13() {
       const URL = `${config.api}` + "/simpson_13";
-      console.log(this.data_s13);
+      if (parseFloat(this.data_s13.n) % 2 != 0) {
+        alert("N debe ser par");
+        return;
+      }
       var s13 = {
         a: parseFloat(this.data_s13.a),
         b: parseFloat(this.data_s13.b),
@@ -263,7 +293,6 @@ export default {
 
     async submitS38() {
       const URL = `${config.api}` + "/simpson_38";
-
       var s38 = {
         x0: parseFloat(this.data_s38.x0),
         xn: parseFloat(this.data_s38.xn),
