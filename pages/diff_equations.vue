@@ -247,7 +247,7 @@ export default {
     },
 
     async submitRK() {
-      const URL = `${config.api}/` + this.selected.value;
+      const URL = `${config.api}` + this.selected.value;
       var rk = {
         h: parseFloat(this.data_rk.h),
         xf: parseFloat(this.data_rk.xf),
@@ -275,7 +275,7 @@ export default {
     },
 
     async submitRK4EDO() {
-      const URL = `${config.api}/` + this.selected.value;
+      const URL = `${config.api}` + this.selected.value;
 
       let ci = [
         [parseFloat(this.data_rk_edo.ci.x), parseFloat(this.data_rk_edo.ci.y1)],
