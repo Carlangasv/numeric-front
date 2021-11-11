@@ -275,7 +275,7 @@ export default {
     },
 
     async submitS13() {
-      const URL = `${config.api}` + "/simpson_13";
+      const URL = `${config.api}` + "simpson_13";
       if (parseFloat(this.data_s13.n) % 2 != 0) {
         alert("N debe ser par");
         return;
@@ -292,7 +292,7 @@ export default {
     },
 
     async submitS38() {
-      const URL = `${config.api}` + "/simpson_38";
+      const URL = `${config.api}` + "simpson_38";
       var s38 = {
         x0: parseFloat(this.data_s38.x0),
         xn: parseFloat(this.data_s38.xn),
@@ -305,7 +305,7 @@ export default {
     },
 
     async submitS13l() {
-      const URL = `${config.api}` + "/simpson_13_list";
+      const URL = `${config.api}` + "simpson_13_list";
       let x_list = this.data_s13l.x_list.split(",");
       let y_list = this.data_s13l.y_list.split(",");
       if (x_list.length != y_list.length) {
@@ -333,7 +333,7 @@ export default {
     },
 
     async submitS38l() {
-      const URL = `${config.api}` + "/simpson_38_list";
+      const URL = `${config.api}` + "simpson_38_list";
       let x_list = this.data_s38l.x_list.split(",");
       let y_list = this.data_s38l.y_list.split(",");
       if (x_list.length != y_list.length) {
