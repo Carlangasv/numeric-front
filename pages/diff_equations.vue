@@ -192,7 +192,7 @@ export default {
         },
 
         {
-          name: "Runge-Kutta 4to Orden ED Ordinaria",
+          name: "Runge-Kutta 4to Orden EDO Sistemas de ecuaciones",
           value: "cuarto_orden_edo",
         },
       ],
